@@ -1,6 +1,6 @@
 # GWAS Locus Visualization and QTL Colocalization Pipeline
 
-**Goal:** Demonstrate two reproducible statistical genetics workflows built from GWAS summary statistics and QTL colocalization (eQTL/pQTL/sQTL).
+**Goal:** Demonstrate two reproducible genomics workflows built from GWAS summary statistics and QTL colocalization across eQTL, pQTL, and sQTL.
 
 ## What this shows
 **1) GWAS Locus Visualization**
@@ -18,7 +18,7 @@ Built from scratch using open datasets. This repo is a workflow showcase (implem
 - QC, clumping/thresholding
 - Produce Manhattan and regional/locus plots
 
-**Workflow 2: QTL Colocalization Pipeline (eQTL/pQTL/sQTL)**
+**Workflow 2: QTL Colocalization Pipeline**
 - Map GWAS loci to QTL datasets
 - Run colocalization analyses (eQTL, pQTL, sQTL)
 - Organize outputs for downstream interpretation
@@ -36,7 +36,7 @@ gwas-multiomics-prioritization/
 
 ## MVP plan
 1) GWAS visualization workflow (ingest → QC → plots)
-2) Colocalization workflow (eQTL/pQTL/sQTL)
+2) Colocalization workflow across eQTL, pQTL, and sQTL
 3) Package code, figures, and resources for reuse
 
 ## Sources
@@ -46,7 +46,7 @@ gwas-multiomics-prioritization/
 
 ## Tech
 - Python (primary)
-- R (coloc / statistical genetics libraries)
+- R for colocalization and genomics libraries
 
 ---
 *Author: Sahar Esmaeeli, PhD*
