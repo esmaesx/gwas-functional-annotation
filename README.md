@@ -23,8 +23,14 @@ Built from scratch using open datasets. This repo is a workflow showcase and doe
 - Run colocalization analyses for eQTL, pQTL, and sQTL
 - Organize outputs for downstream interpretation
 
+## Real data ingestion
+Clean and standardize GWAS summary stats:
+```
+python src/ingest_gwas.py data/raw_gwas.tsv data/gwas_clean.csv
+```
+
 ## Demo code
-Run a simple Manhattan plot demo with synthetic data:
+Run a Manhattan plot demo with synthetic data:
 ```
 python src/gwas_visualization_demo.py
 ```
