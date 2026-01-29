@@ -4,48 +4,56 @@
 
 ## What this shows
 **1) GWAS Locus Visualization**
-- GWAS QC and visualization (Manhattan and regional/locus plots)
+- GWAS QC and visualization using Manhattan and regional plots
 
 **2) QTL Colocalization Pipeline**
 - Colocalization workflow across eQTL, pQTL, and sQTL
 
 ## Notes
-Built from scratch using open datasets. This repo is a workflow showcase (implementation‑focused rather than results‑focused).
+Built from scratch using open datasets. This repo is a workflow showcase and does not report study results.
 
-## Methods (high‑level)
+## Methods (high level)
 **Workflow 1: GWAS Locus Visualization**
 - Ingest and normalize GWAS summary stats
-- QC, clumping/thresholding
-- Produce Manhattan and regional/locus plots
+- QC and clumping or thresholding
+- Produce Manhattan and regional plots
 
 **Workflow 2: QTL Colocalization Pipeline**
 - Map GWAS loci to QTL datasets
-- Run colocalization analyses (eQTL, pQTL, sQTL)
+- Run colocalization analyses for eQTL, pQTL, and sQTL
 - Organize outputs for downstream interpretation
 
-## Repo structure (planned)
+## Demo code
+Run a simple Manhattan plot demo with synthetic data:
+```
+python src/gwas_visualization_demo.py
+```
+Output:
+- `reports/manhattan_demo.png`
+
+## Repo structure
 ```
 gwas-multiomics-prioritization/
-  data/                 # public data / cached results
+  data/                 # public data or cached results
   notebooks/            # analysis notebooks
   src/                  # pipeline code
-  reports/              # figures + short report
+  reports/              # figures and short report
   README.md
   LICENSE
 ```
 
 ## MVP plan
-1) GWAS visualization workflow (ingest → QC → plots)
+1) GWAS visualization workflow
 2) Colocalization workflow across eQTL, pQTL, and sQTL
-3) Package code, figures, and resources for reuse
+3) Package code and figures for reuse
 
 ## Sources
 - GWAS Catalog: https://www.ebi.ac.uk/gwas/
-- GTEx v8 (eQTL/sQTL): https://gtexportal.org/home/
+- GTEx v8 (eQTL and sQTL): https://gtexportal.org/home/
 - SCALLOP pQTL: https://www.scallop.org/
 
 ## Tech
-- Python (primary)
+- Python
 - R for colocalization and genomics libraries
 
 ---
