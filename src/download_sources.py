@@ -14,5 +14,6 @@ SOURCES = {
 }
 
 README = DATA / "SOURCES.md"
-README.write_text("# Data sources (links)\n\n" + "\n".join([f"- {k}: {v}" for k, v in SOURCES.items()]) + "\n")
+lines = "\n".join([f"- {k}: {v}" for k, v in SOURCES.items()])
+README.write_text("# Data sources (links)\n\n" + lines + "\n")
 print(f"Wrote {README}")
