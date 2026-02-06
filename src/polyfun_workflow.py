@@ -24,7 +24,10 @@ def build_polyfun_commands(sumstats, annotations, ld_scores, out_dir):
     })
     steps.append({
         "step": "compute_annotations",
-        "cmd": f"python polyfun/compute_annotation.py --annot {annotations} --out {out/'annotations'}",
+        "cmd": (
+            "python polyfun/compute_annotation.py "
+            f"--annot {annotations} --out {out/'annotations'}"
+        ),
     })
     steps.append({
         "step": "compute_ldscores",
@@ -32,7 +35,11 @@ def build_polyfun_commands(sumstats, annotations, ld_scores, out_dir):
     })
     steps.append({
         "step": "run_polyfun",
-        "cmd": f"python polyfun/run_polyfun.py --sumstats {out/'sumstats.sumstats.gz'} --ldscores {out/'ldscores'} --out {out/'polyfun_results'}",
+        "cmd": (
+            "python polyfun/run_polyfun.py "
+            f"--sumstats {out/'sumstats.sumstats.gz'} "
+            f"--ldscores {out/'ldscores'} --out {out/'polyfun_results'}"
+        ),
     })
     return steps
 
